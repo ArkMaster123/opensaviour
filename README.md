@@ -1,10 +1,6 @@
 <p align="center">
   <a href="https://opensaviour-kohl.vercel.app">
-    <picture>
-      <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
-      <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
-      <img src="packages/console/app/src/asset/logo-ornate-light.svg" alt="OpenSaviour logo">
-    </picture>
+    <img src="assets/logo.png" alt="OpenSaviour logo" width="300">
   </a>
 </p>
 <p align="center">The open source AI coding agent.</p>

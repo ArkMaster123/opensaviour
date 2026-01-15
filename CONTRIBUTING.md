@@ -1,6 +1,6 @@
-# Contributing to OpenCode
+# Contributing to OpenSaviour
 
-We want to make it easy for you to contribute to OpenCode. Here are the most common type of changes that get merged:
+We want to make it easy for you to contribute to OpenSaviour. Here are the most common type of changes that get merged:
 
 - Bug fixes
 - Additional LSPs / Formatters
@@ -14,17 +14,17 @@ However, any UI or core product feature must go through a design review with the
 
 If you are unsure if a PR would be accepted, feel free to ask a maintainer or look for issues with any of the following labels:
 
-- [`help wanted`](https://github.com/anomalyco/opencode/issues?q=is%3Aissue%20state%3Aopen%20label%3Ahelp-wanted)
-- [`good first issue`](https://github.com/anomalyco/opencode/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22)
-- [`bug`](https://github.com/anomalyco/opencode/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug)
-- [`perf`](https://github.com/anomalyco/opencode/issues?q=is%3Aopen%20is%3Aissue%20label%3A%22perf%22)
+- [`help wanted`](https://github.com/ArkMaster123/opensaviour/issues?q=is%3Aissue%20state%3Aopen%20label%3Ahelp-wanted)
+- [`good first issue`](https://github.com/ArkMaster123/opensaviour/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22good%20first%20issue%22)
+- [`bug`](https://github.com/ArkMaster123/opensaviour/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug)
+- [`perf`](https://github.com/ArkMaster123/opensaviour/issues?q=is%3Aopen%20is%3Aissue%20label%3A%22perf%22)
 
 > [!NOTE]
 > PRs that ignore these guardrails will likely be closed.
 
 Want to take on an issue? Leave a comment and a maintainer may assign it to you unless it is something we are already working on.
 
-## Developing OpenCode
+## Developing OpenSaviour
 
 - Requirements: Bun 1.3+
 - Install dependencies and start the dev server from the repo root:
@@ -36,13 +36,13 @@ Want to take on an issue? Leave a comment and a maintainer may assign it to you 
 
 ### Running against a different directory
 
-By default, `bun dev` runs OpenCode in the `packages/opencode` directory. To run it against a different directory or repository:
+By default, `bun dev` runs OpenSaviour in the `packages/opencode` directory. To run it against a different directory or repository:
 
 ```bash
 bun dev <directory>
 ```
 
-To run OpenCode in the root of the opencode repo itself:
+To run OpenSaviour in the root of the opensaviour repo itself:
 
 ```bash
 bun dev .
@@ -59,17 +59,17 @@ To compile a standalone executable:
 Then run it with:
 
 ```bash
-./packages/opencode/dist/opencode-<platform>/bin/opencode
+./packages/opencode/dist/opensaviour-<platform>/bin/opensaviour
 ```
 
 Replace `<platform>` with your platform (e.g., `darwin-arm64`, `linux-x64`).
 
 - Core pieces:
-  - `packages/opencode`: OpenCode core business logic & server.
+  - `packages/opencode`: OpenSaviour core business logic & server.
   - `packages/opencode/src/cli/cmd/tui/`: The TUI code, written in SolidJS with [opentui](https://github.com/sst/opentui)
   - `packages/app`: The shared web UI components, written in SolidJS
   - `packages/desktop`: The native desktop app, built with Tauri (wraps `packages/app`)
-  - `packages/plugin`: Source for `@opencode-ai/plugin`
+  - `packages/plugin`: Source for `@opensaviour-ai/plugin`
 
 ### Running the Web App
 
@@ -119,16 +119,16 @@ Please try to follow the [style guide](./STYLE_GUIDE.md)
 
 Bun debugging is currently rough around the edges. We hope this guide helps you get set up and avoid some pain points.
 
-The most reliable way to debug OpenCode is to run it manually in a terminal via `bun run --inspect=<url> dev ...` and attach
+The most reliable way to debug OpenSaviour is to run it manually in a terminal via `bun run --inspect=<url> dev ...` and attach
 your debugger via that URL. Other methods can result in breakpoints being mapped incorrectly, at least in VSCode (YMMV).
 
 Caveats:
 
-- If you want to run the OpenCode TUI and have breakpoints triggered in the server code, you might need to run `bun dev spawn` instead of
+- If you want to run the OpenSaviour TUI and have breakpoints triggered in the server code, you might need to run `bun dev spawn` instead of
   the usual `bun dev`. This is because `bun dev` runs the server in a worker thread and breakpoints might not work there.
 - If `spawn` does not work for you, you can debug the server separately:
   - Debug server: `bun run --inspect=ws://localhost:6499/ ./src/index.ts serve --port 4096`,
-    then attach TUI with `opencode attach http://localhost:4096`
+    then attach TUI with `opensaviour attach http://localhost:4096`
   - Debug TUI: `bun run --inspect=ws://localhost:6499/ --conditions=browser ./src/index.ts`
 
 Other tips and tricks:
@@ -196,7 +196,7 @@ You can optionally include a scope to indicate which package is affected:
 
 - `feat(app):` feature in the app package
 - `fix(desktop):` bug fix in the desktop package
-- `chore(opencode):` maintenance in the opencode package
+- `chore(opensaviour):` maintenance in the opensaviour package
 
 Examples:
 
