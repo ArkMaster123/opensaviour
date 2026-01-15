@@ -9,7 +9,7 @@ NC='\033[0m' # No Color
 
 usage() {
     cat <<EOF
-OpenSaviour Installer
+Open Saviour Installer
 
 Usage: install.sh [options]
 
@@ -431,11 +431,11 @@ fi
 
 echo -e ""
 echo -e "${MUTED}╔══════════════════════════════════════════╗${NC}"
-echo -e "${MUTED}║${NC}           OpenSaviour Installer           ${MUTED}║${NC}"
+echo -e "${MUTED}║${NC}           Open Saviour Installer          ${MUTED}║${NC}"
 echo -e "${MUTED}╚══════════════════════════════════════════╝${NC}"
 echo -e ""
 echo -e ""
-echo -e "${MUTED}OpenSaviour includes free models, to start:${NC}"
+echo -e "${MUTED}Open Saviour includes free models, to start:${NC}"
 echo -e ""
 echo -e "cd <project>  ${MUTED}# Open directory${NC}"
 echo -e "opensaviour      ${MUTED}# Run command${NC}"
