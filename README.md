@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://opensaviour-tau.vercel.app">
+  <a href="https://opensaviour-kohl.vercel.app">
     <picture>
       <source srcset="packages/console/app/src/asset/logo-ornate-dark.svg" media="(prefers-color-scheme: dark)">
       <source srcset="packages/console/app/src/asset/logo-ornate-light.svg" media="(prefers-color-scheme: light)">
@@ -9,12 +9,12 @@
 </p>
 <p align="center">The open source AI coding agent.</p>
 <p align="center">
-  <a href="https://opensaviour-tau.vercel.app/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
+  <a href="https://opensaviour-kohl.vercel.app/discord"><img alt="Discord" src="https://img.shields.io/discord/1391832426048651334?style=flat-square&label=discord" /></a>
   <a href="https://www.npmjs.com/package/opensaviour"><img alt="npm" src="https://img.shields.io/npm/v/opensaviour?style=flat-square" /></a>
   <a href="https://github.com/ArkMaster123/opensaviour/actions/workflows/publish.yml"><img alt="Build status" src="https://img.shields.io/github/actions/workflow/status/ArkMaster123/opensaviour/publish.yml?style=flat-square&branch=dev" /></a>
 </p>
 
-[![OpenSaviour Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://opensaviour-tau.vercel.app)
+[![OpenSaviour Terminal UI](packages/web/src/assets/lander/screenshot.png)](https://opensaviour-kohl.vercel.app)
 
 ---
 
@@ -22,7 +22,7 @@
 
 ```bash
 # YOLO
-curl -fsSL https://opensaviour-tau.vercel.app/install | bash
+curl -fsSL https://opensaviour-kohl.vercel.app/install | bash
 
 # Package managers
 npm i -g opensaviour@latest        # or bun/pnpm/yarn
@@ -40,7 +40,7 @@ nix run nixpkgs#opensaviour        # or github:ArkMaster123/opensaviour for late
 
 ### Desktop App (BETA)
 
-OpenSaviour is also available as a desktop application. Download directly from the [releases page](https://github.com/ArkMaster123/opensaviour/releases) or [opensaviour-tau.vercel.app/download](https://opensaviour-tau.vercel.app/download).
+OpenSaviour is also available as a desktop application. Download directly from the [releases page](https://github.com/ArkMaster123/opensaviour/releases) or [opensaviour-kohl.vercel.app/download](https://opensaviour-kohl.vercel.app/download).
 
 | Platform              | Download                                |
 | --------------------- | --------------------------------------- |
@@ -65,8 +65,8 @@ The install script respects the following priority order for the installation pa
 
 ```bash
 # Examples
-OPENSAVIOUR_INSTALL_DIR=/usr/local/bin curl -fsSL https://opensaviour-tau.vercel.app/install | bash
-XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://opensaviour-tau.vercel.app/install | bash
+OPENSAVIOUR_INSTALL_DIR=/usr/local/bin curl -fsSL https://opensaviour-kohl.vercel.app/install | bash
+XDG_BIN_DIR=$HOME/.local/bin curl -fsSL https://opensaviour-kohl.vercel.app/install | bash
 ```
 
 ### Agents
@@ -82,11 +82,11 @@ OpenSaviour includes two built-in agents you can switch between with the `Tab` k
 Also, included is a **general** subagent for complex searches and multistep tasks.
 This is used internally and can be invoked using `@general` in messages.
 
-Learn more about [agents](https://opensaviour-tau.vercel.app/docs/agents).
+Learn more about [agents](https://opensaviour-kohl.vercel.app/docs/agents).
 
 ### Documentation
 
-For more info on how to configure OpenSaviour [**head over to our docs**](https://opensaviour-tau.vercel.app/docs).
+For more info on how to configure OpenSaviour [**head over to our docs**](https://opensaviour-kohl.vercel.app/docs).
 
 ### Contributing
 
@@ -103,7 +103,7 @@ If you are working on a project that's related to OpenSaviour and is using "open
 It's very similar to Claude Code in terms of capability. Here are the key differences:
 
 - 100% open source
-- Not coupled to any provider. Although we recommend the models we provide through [OpenSaviour Zen](https://opensaviour-tau.vercel.app/zen); OpenSaviour can be used with Claude, OpenAI, Google or even local models. As models evolve the gaps between them will close and pricing will drop so being provider-agnostic is important.
+- Not coupled to any provider. Although we recommend the models we provide through [OpenSaviour Zen](https://opensaviour-kohl.vercel.app/zen); OpenSaviour can be used with Claude, OpenAI, Google or even local models. As models evolve the gaps between them will close and pricing will drop so being provider-agnostic is important.
 - Out of the box LSP support
 - A focus on TUI. OpenSaviour is built by neovim users and the creators of [terminal.shop](https://terminal.shop); we are going to push the limits of what's possible in the terminal.
 - A client/server architecture. This for example can allow OpenSaviour to run on your computer, while you can drive it remotely from a mobile app. Meaning that the TUI frontend is just one of the possible clients.
