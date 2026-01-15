@@ -20,8 +20,8 @@ Options:
         --no-modify-path    Don't modify shell config files (.zshrc, .bashrc, etc.)
 
 Examples:
-    curl -fsSL https://opensaviour.dev/install | bash
-    curl -fsSL https://opensaviour.dev/install | bash -s -- --version 1.0.180
+    curl -fsSL https://opensaviour.vercel.app/install | bash
+    curl -fsSL https://opensaviour.vercel.app/install | bash -s -- --version 1.0.180
     ./install --binary /path/to/opensaviour
 EOF
 }
@@ -440,6 +440,6 @@ echo -e ""
 echo -e "cd <project>  ${MUTED}# Open directory${NC}"
 echo -e "opensaviour      ${MUTED}# Run command${NC}"
 echo -e ""
-echo -e "${MUTED}For more information visit ${NC}https://opensaviour.dev/docs"
+echo -e "${MUTED}For more information visit ${NC}https://github.com/ArkMaster123/opensaviour"
 echo -e ""
 echo -e ""
