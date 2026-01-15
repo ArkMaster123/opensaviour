@@ -430,10 +430,23 @@ if [ -n "${GITHUB_ACTIONS-}" ] && [ "${GITHUB_ACTIONS}" == "true" ]; then
 fi
 
 echo -e ""
-echo -e "${MUTED}╔══════════════════════════════════════════╗${NC}"
-echo -e "${MUTED}║${NC}           Open Saviour Installer          ${MUTED}║${NC}"
-echo -e "${MUTED}╚══════════════════════════════════════════╝${NC}"
-echo -e ""
+
+# Animated ASCII art
+animate_text() {
+    local text="$1"
+    local delay="${2:-0.02}"
+    for ((i=0; i<${#text}; i++)); do
+        echo -n "${text:$i:1}"
+        sleep "$delay"
+    done
+    echo
+}
+
+echo -e "${MUTED}"
+animate_text "╔══════════════════════════════════════════╗" 0.005
+animate_text "║           Open Saviour Installer          ║" 0.01
+animate_text "╚══════════════════════════════════════════╝" 0.005
+echo -e "${NC}"
 echo -e ""
 echo -e "${MUTED}Open Saviour includes free models, to start:${NC}"
 echo -e ""
