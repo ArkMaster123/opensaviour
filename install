@@ -326,7 +326,13 @@ download_and_install() {
         unzip -q "$tmp_dir/$filename" -d "$tmp_dir"
     fi
 
-    mv "$tmp_dir/opensaviour" "$INSTALL_DIR"
+    # Find the binary - it may be in a subdirectory
+    binary_file=$(find "$tmp_dir" -name "opensaviour" -type f | head -1)
+    if [ -z "$binary_file" ]; then
+        echo -e "${RED}Error: opensaviour binary not found in archive${NC}"
+        exit 1
+    fi
+    mv "$binary_file" "$INSTALL_DIR"
     chmod 755 "${INSTALL_DIR}/opensaviour"
     rm -rf "$tmp_dir"
 }
