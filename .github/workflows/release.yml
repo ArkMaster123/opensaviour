@@ -18,10 +18,13 @@ jobs:
       matrix:
         include:
           - os: ubuntu-latest
+            build_os: linux
             targets: "linux-arm64 linux-x64 linux-x64-baseline linux-arm64-musl linux-x64-musl linux-x64-baseline-musl"
           - os: macos-latest
+            build_os: darwin
             targets: "darwin-arm64 darwin-x64 darwin-x64-baseline"
           - os: windows-latest
+            build_os: win32
             targets: "windows-x64 windows-x64-baseline"
     
     runs-on: ${{ matrix.os }}
@@ -42,7 +45,7 @@ jobs:
         working-directory: packages/opencode
 
       - name: Build CLI
-        run: bun run script/build.ts
+        run: bun run script/build.ts --os=${{ matrix.build_os }}
         working-directory: packages/opencode
         env:
           OPENCODE_VERSION: ${{ inputs.version }}

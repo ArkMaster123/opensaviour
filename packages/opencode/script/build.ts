@@ -18,6 +18,7 @@ import { Script } from "@opencode-ai/script"
 const singleFlag = process.argv.includes("--single")
 const baselineFlag = process.argv.includes("--baseline")
 const skipInstall = process.argv.includes("--skip-install")
+const osFilter = process.argv.find((arg) => arg.startsWith("--os="))?.split("=")[1]
 
 const allTargets: {
   os: string
@@ -92,7 +93,9 @@ const targets = singleFlag
 
       return true
     })
-  : allTargets
+  : osFilter
+    ? allTargets.filter((item) => item.os === osFilter)
+    : allTargets
 
 await $`rm -rf dist`
 
