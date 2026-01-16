@@ -65,7 +65,7 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
-INSTALL_DIR=$HOME/.opencode/bin
+INSTALL_DIR=$HOME/.opensaviour/bin
 mkdir -p "$INSTALL_DIR"
 
 # If --binary is provided, skip all download/detection logic
@@ -167,7 +167,7 @@ else
     fi
 
     if [ -z "$requested_version" ]; then
-        url="https://github.com/anomalyco/opencode/releases/latest/download/$filename"
+        url="https://github.com/ArkMaster123/opensaviour/releases/latest/download/$filename"
         specific_version=$(curl -s https://api.github.com/repos/anomalyco/opencode/releases/latest | sed -n 's/.*"tag_name": *"v\([^"]*\)".*/\1/p')
 
         if [[ $? -ne 0 || -z "$specific_version" ]]; then
@@ -177,14 +177,14 @@ else
     else
         # Strip leading 'v' if present
         requested_version="${requested_version#v}"
-        url="https://github.com/anomalyco/opencode/releases/download/v${requested_version}/$filename"
+        url="https://github.com/ArkMaster123/opensaviour/releases/download/v${requested_version}/$filename"
         specific_version=$requested_version
 
         # Verify the release exists before downloading
-        http_status=$(curl -sI -o /dev/null -w "%{http_code}" "https://github.com/anomalyco/opencode/releases/tag/v${requested_version}")
+        http_status=$(curl -sI -o /dev/null -w "%{http_code}" "https://github.com/ArkMaster123/opensaviour/releases/tag/v${requested_version}")
         if [ "$http_status" = "404" ]; then
             echo -e "${RED}Error: Release v${requested_version} not found${NC}"
-            echo -e "${MUTED}Available releases: https://github.com/anomalyco/opencode/releases${NC}"
+            echo -e "${MUTED}Available releases: https://github.com/ArkMaster123/opensaviour/releases${NC}"
             exit 1
         fi
     fi
