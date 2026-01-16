@@ -94,7 +94,12 @@ const targets = singleFlag
       return true
     })
   : osFilter
-    ? allTargets.filter((item) => item.os === osFilter)
+    ? allTargets.filter((item) => {
+        if (item.os !== osFilter) return false
+        // Skip baseline builds on Windows - Bun has issues downloading baseline executables
+        if (osFilter === "win32" && item.avx2 === false) return false
+        return true
+      })
     : allTargets
 
 await $`rm -rf dist`

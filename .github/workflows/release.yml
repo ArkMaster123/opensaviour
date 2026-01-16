@@ -25,7 +25,7 @@ jobs:
             targets: "darwin-arm64 darwin-x64 darwin-x64-baseline"
           - os: windows-latest
             build_os: win32
-            targets: "windows-x64 windows-x64-baseline"
+            targets: "windows-x64"
     
     runs-on: ${{ matrix.os }}
     
