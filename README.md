@@ -6,6 +6,12 @@
   <a href="https://github.com/ArkMaster123/opensaviour"><img alt="GitHub" src="https://img.shields.io/github/stars/ArkMaster123/opensaviour?style=flat-square" /></a>
 </p>
 
+<p align="center">
+  <video src="https://github.com/ArkMaster123/opensaviour/raw/dev/assets/demo.mp4" width="100%" autoplay loop muted playsinline></video>
+</p>
+
+https://github.com/ArkMaster123/opensaviour/raw/dev/assets/demo.mp4
+
 ---
 
 > **Acknowledgements**
