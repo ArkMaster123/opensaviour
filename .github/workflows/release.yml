@@ -8,6 +8,11 @@ on:
         required: true
         type: string
 
+# Only run on production branch
+concurrency:
+  group: release
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -26,9 +31,9 @@ jobs:
           - os: windows-latest
             build_os: win32
             targets: "windows-x64"
-    
+
     runs-on: ${{ matrix.os }}
-    
+
     steps:
       - uses: actions/checkout@v4
 
