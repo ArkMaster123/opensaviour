@@ -7,10 +7,10 @@
 </p>
 
 <p align="center">
-  <video src="https://github.com/ArkMaster123/opensaviour/raw/dev/assets/demo.mp4" width="100%" autoplay loop muted playsinline></video>
+  <video src="https://github.com/ArkMaster123/opensaviour/raw/production/assets/demo.mp4" width="100%" autoplay loop muted playsinline></video>
 </p>
 
-https://github.com/ArkMaster123/opensaviour/raw/dev/assets/demo.mp4
+https://github.com/ArkMaster123/opensaviour/raw/production/assets/demo.mp4
 
 ---
 
