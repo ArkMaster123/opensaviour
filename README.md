@@ -7,10 +7,8 @@
 </p>
 
 <p align="center">
-  <video src="https://github.com/ArkMaster123/opensaviour/raw/production/assets/demo.mp4" width="100%" autoplay loop muted playsinline></video>
+  <img src="assets/demo.gif" alt="OpenSaviour Demo" width="100%">
 </p>
-
-https://github.com/ArkMaster123/opensaviour/raw/production/assets/demo.mp4
 
 ---
 
